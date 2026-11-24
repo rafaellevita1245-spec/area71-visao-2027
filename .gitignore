@@ -1,0 +1,14 @@
+# Sistema operacional e editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs e temporários
+*.log
+node_modules/
+.env
+.env.local

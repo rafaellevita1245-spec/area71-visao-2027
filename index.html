@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Área 71 · IEADAM — Experiência Visão & Projetos 2027</title>
+
+  <!-- Fontes Cinematográficas & Editoriais -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Design System Cinético -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Bibliotecas de Motion (GSAP 3 + ScrollTrigger + Lenis Smooth Scroll) com fallback resiliente -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
+</head>
+<body>
+  <!-- ========================================================================
+       CAMADAS ATMOSFÉRICAS VIVAS (AURORA CANVAS, GRADE, GRANULAÇÃO, FX)
+       ======================================================================== -->
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+  <div class="architectural-grid" aria-hidden="true"></div>
+  <div class="film-grain" aria-hidden="true"></div>
+  <canvas id="fx-canvas" aria-hidden="true"></canvas>
+
+  <!-- Barra de progresso de leitura no topo -->
+  <div id="scroll-progress-line" aria-hidden="true"></div>
+
+  <!-- ========================================================================
+       PRELOADER CINEMATOGRÁFICO DE ABERTURA
+       ======================================================================== -->
+  <div id="preloader" role="status" aria-label="Carregando Portal Área 71">
+    <div class="preloader-emblem">
+      <div class="preloader-ring"></div>
+      <div class="preloader-ring-inner"></div>
+      <div class="preloader-num">71</div>
+    </div>
+    <div class="preloader-meta">IEADAM · NÚCLEO 17 · VISÃO 2027</div>
+    <div class="preloader-bar"><div class="preloader-bar-fill"></div></div>
+  </div>
+
+  <!-- Cortina de transição entre capítulos -->
+  <div id="page-curtain" aria-hidden="true">
+    <div class="curtain-glow"></div>
+    <div class="curtain-label">
+      <span class="curtain-kicker">CAPÍTULO 01</span>
+      <span class="curtain-title">Visão Geral</span>
+    </div>
+  </div>
+
+  <!-- Cursor magnético customizado (desktop) -->
+  <div id="custom-cursor-dot" aria-hidden="true"></div>
+  <div id="custom-cursor-ring" aria-hidden="true">
+    <span class="cursor-text"></span>
+  </div>
+
+  <!-- ========================================================================
+       TOPBAR FLUTUANTE DE VIDRO (COCKPIT DE MOTION)
+       ======================================================================== -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="brand-btn" onclick="window.AREA71_APP.go('visao-geral')" data-cursor="INÍCIO">
+        <span class="brand-mark">71</span>
+        <span class="brand-name">Área 71 · IEADAM</span>
+      </button>
+
+      <span class="topbar-divider"></span>
+
+      <button class="chapter-crumb" onclick="window.AREA71_APP.togglePortalMenu()" title="Abrir Índice de Capítulos (M)" data-cursor="CAPÍTULOS">
+        <span class="chapter-crumb-dot"></span>
+        <span class="chapter-crumb-text" id="topbar-chapter-text">01 · Visão Geral · Área 71</span>
+      </button>
+    </div>
+
+    <div class="topbar-actions">
+      <button class="nav-pill-btn" onclick="window.AREA71_APP.togglePortalMenu()" title="Índice de Capítulos (Tecla M)">
+        <span data-icon="grid" data-size="15"></span>
+        <span class="hide-sm">Capítulos</span>
+        <span class="kbd-chip hide-sm">M</span>
+      </button>
+
+      <button class="nav-pill-btn" onclick="window.AREA71_APP.openCommand()" title="Busca Instantânea (Ctrl+K)">
+        <span data-icon="search" data-size="15"></span>
+        <span class="hide-sm">Buscar</span>
+        <span class="kbd-chip hide-sm">Ctrl K</span>
+      </button>
+
+      <button class="nav-pill-btn" onclick="window.AREA71_APP.toggleTheme()" title="Alternar Tema Obsidiana / Alabastro">
+        <span id="theme-icon-slot"></span>
+        <span id="theme-label" class="hide-sm">Claro</span>
+      </button>
+
+      <button class="nav-pill-btn is-primary" onclick="window.AREA71_APP.toggleStageMode()" title="Ativar Modo Palco / Apresentação (Tecla P)" data-magnetic>
+        <span data-icon="presentation" data-size="15"></span>
+        <span class="hide-sm">Palco</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Botão flutuante para sair do Modo Palco -->
+  <button id="stage-exit-pill" onclick="window.AREA71_APP.toggleStageMode(false)">
+    <span data-icon="x" data-size="14"></span>
+    <span>Sair do Palco</span>
+    <span class="kbd-chip">Esc</span>
+  </button>
+
+  <!-- ========================================================================
+       PALCO DINÂMICO PRINCIPAL
+       ======================================================================== -->
+  <main id="app-stage"></main>
+
+  <!-- ========================================================================
+       FLOATING BOTTOM DOCK ("SPATIAL NAVIGATOR")
+       ======================================================================== -->
+  <aside id="bottom-dock" aria-label="Navegação rápida entre capítulos"></aside>
+
+  <!-- ========================================================================
+       FULLSCREEN PORTAL MENU ("ÍNDICE CINEMATOGRÁFICO")
+       ======================================================================== -->
+  <div id="portal-menu" role="dialog" aria-modal="true" aria-label="Índice de Capítulos">
+    <div id="portal-menu-content"></div>
+  </div>
+
+  <!-- ========================================================================
+       COMMAND PALETTE MODAL (CTRL+K — PÁGINAS, 12 PORTAS & AÇÕES)
+       ======================================================================== -->
+  <div id="command-modal" role="dialog" aria-modal="true" aria-label="Busca rápida">
+    <div class="command-box">
+      <div class="command-input-wrap">
+        <span data-icon="search" data-size="18" style="color:var(--accent)"></span>
+        <input id="command-input" type="text" autocomplete="off"
+               placeholder="Buscar capítulos, meses, 12 Portas, EBD, retiros, comandos..." />
+        <button class="kbd-chip" onclick="window.AREA71_APP.closeCommand()">Esc</button>
+      </div>
+      <div id="command-results"></div>
+      <div class="command-footer">
+        <span>↑ ↓ navegar · Enter abrir</span>
+        <span>ÁREA 71 · MOTION EXPERIENCE 2027</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toasts flutuantes -->
+  <div id="toast-container" aria-live="polite"></div>
+
+  <!-- ========================================================================
+       SCRIPTS DA APLICAÇÃO (TEXTOS ISOLADOS EM DATA.JS)
+       ======================================================================== -->
+  <script src="data.js" defer></script>
+  <script src="motion.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>

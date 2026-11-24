@@ -488,7 +488,7 @@
             ${icon('calendar', 14)}
             <span>${ph.period}</span>
           </span>
-          <span class="kbd-chip">FASE ${activeIdx + 1} DE ${page.phases.length} · TECLAS 1–4</span>
+          <span class="kbd-chip">FASE ${activeIdx + 1} DE ${page.phases.length} · TECLAS 1–${Math.min(page.phases.length, 7)}</span>
         </div>
 
         <h3 style="margin:0;font-family:var(--font-display);font-size:clamp(1.35rem,2.4vw,1.95rem);font-weight:800;letter-spacing:-0.03em;color:var(--text-1);">
@@ -527,7 +527,7 @@
           <div>
             <div class="section-kicker">SEQUÊNCIA EXECUTIVA · 2027</div>
             <h2 class="section-title">${page.phasesTitle || 'Jornada em Fases'}</h2>
-            <p class="section-sub">Navegue pelas etapas abaixo ou use as teclas 1, 2, 3 e 4 durante a apresentação.</p>
+            <p class="section-sub">Navegue pelas etapas abaixo ou use as teclas numéricas durante a apresentação.</p>
           </div>
         </div>
         <div id="phases-container">${renderPhasesInner(page)}</div>
@@ -1308,7 +1308,7 @@
     const actions = [
       { title: 'Alternar Tema Claro / Escuro', sub: 'Alterna entre Obsidiana Cinematográfica e Alabastro Editorial', icon: state.theme === 'dark' ? 'sun' : 'moon', color: 'var(--accent)', keys: 'tema claro escuro dark light', run: () => { closeCommand(); toggleTheme(); } },
       { title: state.stageMode ? 'Sair do Modo Palco' : 'Ativar Modo Palco (Apresentação)', sub: 'Visual limpo para telão e projetor com navegação por setas', icon: 'presentation', color: 'var(--accent)', keys: 'apresentar palco keynote telao projetor', run: () => { closeCommand(); toggleStageMode(); } },
-      { title: 'Abrir Índice Cinematográfico (Capítulos)', sub: 'Menu em tela cheia com preview de todos os 11 capítulos', icon: 'grid', color: 'var(--accent)', keys: 'menu capitulos indice', run: () => { closeCommand(); openPortalMenu(); } }
+      { title: 'Abrir Índice Cinematográfico (Capítulos)', sub: 'Menu em tela cheia com preview de todos os 12 capítulos', icon: 'grid', color: 'var(--accent)', keys: 'menu capitulos indice', run: () => { closeCommand(); openPortalMenu(); } }
     ];
 
     actions.forEach(a => {
@@ -1428,7 +1428,7 @@
           e.preventDefault();
           step(-1);
         }
-      } else if (['1', '2', '3', '4'].includes(e.key)) {
+      } else if (['1', '2', '3', '4', '5', '6', '7'].includes(e.key)) {
         const page = DATA.PAGES[state.currentPage];
         const idx = parseInt(e.key, 10) - 1;
         if (page && page.phases && page.phases[idx]) {

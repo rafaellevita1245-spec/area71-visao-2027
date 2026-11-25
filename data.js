@@ -307,7 +307,7 @@ window.AREA71_DATA = (function () {
     {
       evento: 'Escola "Afiando o Machado"',
       mes: 'Janeiro',
-      obs: 'Datas definidas (07 a 28/01). Falta decidir como a Campanha (04–15/01) convive com as noites 07, 11 e 14/01',
+      obs: 'Datas e encaixe definidos (07 a 28/01). A Campanha segue todos os dias; a Escola acontece dentro dela nas noites 07, 11 e 14/01',
       targetPage: 'afiando-machado'
     },
     {
@@ -346,7 +346,7 @@ window.AREA71_DATA = (function () {
     {
       data: '04 a 15/01/2027 · Campanha de Oração',
       titulo: 'Campanha × Escola, Reunião do Ministério e Fruto Fiel',
-      desc: 'A Campanha (10h às 00h, Congregação 09) cobre a Reunião do Ministério (06/01), o Fruto Fiel (09/01) e as noites 07, 11 e 14/01 da Escola Afiando o Machado. Decidir o encaixe.',
+      desc: 'Decidido: a Campanha (propósito inquebrável) segue todos os dias. Nas terças e domingos continua depois do culto de cada congregação; no Fruto Fiel (09/01) continua depois dele. Nas noites da Escola (07, 11 e 14/01) a Campanha segue normalmente. Falta só fechar o horário da Escola dentro do dia.',
       targetPage: 'afiando-machado'
     },
     {
@@ -498,20 +498,20 @@ window.AREA71_DATA = (function () {
         rgb2: '245, 158, 11',
         gradient: 'linear-gradient(125deg, #431407 0%, #9A3412 45%, #D97706 85%, #1C1917 100%)'
       },
-      subtitle: 'Sete noites de janeiro (07 a 28/01, 19h30 às 21h30) para alinhar a visão, formar a liderança e entregar as direções de cada rede e ministério para 2027. Segunda-feira reúne a Área toda; quinta-feira é por divisão.',
-      keywords: 'afiando o machado escola lideranca janeiro porta das ovelhas eclesiastes segunda quinta 19h30 abertura mapa de lideranca visao celular redes entrega das direcoes campanha',
+      subtitle: 'Sete noites de janeiro (07 a 28/01, 19h30 às 21h30) para alinhar a visão, formar a liderança e apresentar as diretrizes gerais da Área para 2027. Segunda-feira reúne a Área toda; quinta-feira é por divisão.',
+      keywords: 'afiando o machado escola lideranca janeiro porta das ovelhas eclesiastes segunda quinta 19h30 abertura mapa de lideranca visao celular redes diretrizes gerais consagracao fruto fiel campanha',
       properties: [
         { label: 'Mês-Âncora / Porta', value: 'Janeiro · Porta das Ovelhas' },
         { label: 'Calendário', value: '7 noites · Qui 07, Seg 11, Qui 14, Seg 18, Qui 21, Seg 25, Qui 28/01' },
         { label: 'Horário', value: '19h30 às 21h30' },
         { label: 'Regra da semana', value: 'Segunda = Área toda · Quinta = dinâmicas por divisão (exceção: abertura em 07/01)' },
         { label: 'Público-Alvo', value: 'Pastores, obreiros, líderes de célula, coordenadores de redes e candidatos a líder' },
-        { label: 'Status 2027', value: 'Desenho aprovado em conversa · horários finos e Campanha ainda a decidir' }
+        { label: 'Status 2027', value: 'Desenho aprovado · Campanha segue normalmente nos dias de Escola · horários finos a fechar' }
       ],
       callout: {
         verse: '“Se estiver embotado o ferro, e não se afiar o corte, então se deve redobrar a força; mas a sabedoria é excelente para dirigir.”',
         ref: 'Eclesiastes 10:10',
-        note: 'O líder cansado muitas vezes não está trabalhando demais, está cortando com o machado cego. Janeiro é o mês de estruturar: afiar a visão, mapear quem serve e quem falta, e entregar a cada setor a sua direção.'
+        note: 'O líder cansado muitas vezes não está trabalhando demais, está cortando com o machado cego. Janeiro é o mês de estruturar: afiar a visão, mapear quem serve e quem falta, e apresentar as diretrizes gerais para 2027.'
       },
       pillars: [
         {
@@ -531,8 +531,8 @@ window.AREA71_DATA = (function () {
         },
         {
           icon: 'clock',
-          title: 'Direções entregues pela Direção',
-          desc: 'No encerramento, quem entrega é a Direção: cada rede e ministério recebe conceito, projeto 2027 e mês-chave. Os líderes não precisam chegar com nada pronto.'
+          title: 'Diretrizes gerais, sem entrega individual',
+          desc: 'A Direção apresenta as diretrizes gerais da Área. Quem lidera cada setor é tratado em conversa individual com o pastor, fora da pauta. A consagração oficial da liderança, local e geral, acontece no primeiro Fruto Fiel de fevereiro.'
         }
       ],
       phasesTitle: 'As 7 Noites da Escola (19h30 às 21h30)',
@@ -574,7 +574,7 @@ window.AREA71_DATA = (function () {
             'Pergunta 2: Quais funções estão vagas (inclusive líder de intercessão e responsável por congregação)?',
             'Pergunta 3: Quem são os candidatos a líder em treinamento?',
             'Critério de escolha: Êxodo 18:21 (homens capazes, que temem a Deus, verdadeiros, inimigos da avareza), a base do modelo de Jetro.',
-            'Resultado: a Direção chega ao dia 28 com o mapa completo para decidir e entregar as direções.',
+            'Resultado: a Direção chega ao dia 28 com o mapa completo para conversar individualmente com cada líder.',
             'Fim da noite: oração de consagração, na véspera do encerramento da Campanha (15/01).'
           ]
         },
@@ -600,7 +600,7 @@ window.AREA71_DATA = (function () {
             'Rede de Homens: conceito, projeto do ano e mês-chave (Porta da Fonte, Congresso de Homens IEADAM em 08/05).',
             'Rede de Mulheres: conceito, projeto do ano e mês-chave (Porta do Monturo em Junho; Congresso de Mulheres IEADAM em 28/08).',
             'Em cada sala: o que sabemos hoje, o que vamos construir no 1º semestre e quem lidera.',
-            'Entrega: rascunho de direção de cada rede, para ser fechado na noite de 28/01.'
+            'Entrega: ajustes recolhidos de cada rede, para alimentar as diretrizes gerais.'
           ]
         },
         {
@@ -611,17 +611,18 @@ window.AREA71_DATA = (function () {
           bullets: [
             '19h30 às 20h30 (Área toda): integração das redes e apresentação do conceito da Rede dos Anciões (Geração 60+). Momento de honrar os mais velhos diante de todos.',
             '20h30 às 21h30 (divisão): Jovens e Louvor e Dança juntos. Conceito, projeto do ano e mês-chave de cada um (Jovens: Fevereiro, Setembro e Novembro; Louvor: Seminário na Porta Velha, em Abril).',
-            'Entrega: rascunho de direção de Jovens e de Louvor e Dança.'
+            'Entrega: ajustes recolhidos de Jovens e de Louvor e Dança.'
           ]
         },
         {
-          tab: 'Aula 7 · Entrega e Envio',
+          tab: 'Aula 7 · Diretrizes e Envio',
           period: 'Qui 28/01 · 19h30–21h30',
-          title: 'Entrega das Direções e Envio',
-          summary: 'Quem entrega é a Direção, não os líderes. Cada rede e ministério recebe sua direção para 2027. Formato (Área toda ou por rede) a definir.',
+          title: 'Diretrizes Gerais e Envio',
+          summary: 'Sem entrega de direções individuais. O pastor passa as diretrizes gerais para 2027. As conversas individuais sobre quem sai ou permanece na liderança acontecem à parte e não entram na pauta. A consagração oficial da liderança, local e geral, é no primeiro Fruto Fiel de fevereiro.',
           bullets: [
-            'Entrega por setor: conceito, projeto 2027, mês-chave, quem lidera e quais funções ainda estão vagas.',
-            'Ministérios sem líder: janeiro é mês de estruturação; nomeações e convites são feitos a partir do Mapa de Liderança.',
+            'Diretrizes gerais da Área 71 para 2027, para todos juntos.',
+            'Janeiro é mês de estruturação: ministérios ainda sem líder serão tratados em conversa individual, não em plenário.',
+            'Aviso: consagração oficial da liderança no primeiro Fruto Fiel de fevereiro (data a confirmar no calendário).',
             'Apresentação da Reassunção dos cargos a partir de 01/02.',
             'Consagração e oração de envio (ceia e imposição de mãos, a critério do pastor).'
           ]
@@ -640,9 +641,9 @@ window.AREA71_DATA = (function () {
                   <tr><td>Seg 11/01</td><td>Área toda</td><td>Caráter e chamado + visão do ano</td><td>Calendário 2027</td></tr>
                   <tr><td>Qui 14/01</td><td>Divisões</td><td>Mapa de liderança</td><td>Vagas e candidatos mapeados</td></tr>
                   <tr><td>Seg 18/01</td><td>Área toda</td><td>Visão celular</td><td>Definição única de célula</td></tr>
-                  <tr><td>Qui 21/01</td><td>Divisões</td><td>Homens e Mulheres</td><td>Rascunho das duas direções</td></tr>
-                  <tr><td>Seg 25/01</td><td>19h30 Área toda · 20h30 Jovens + Louvor e Dança</td><td>Integração, Anciões, Jovens e Louvor</td><td>Rascunho das direções</td></tr>
-                  <tr><td>Qui 28/01</td><td>A definir</td><td>Entrega das direções e envio</td><td>Cada setor com sua direção</td></tr>
+                  <tr><td>Qui 21/01</td><td>Divisões</td><td>Homens e Mulheres</td><td>Ajustes das duas redes</td></tr>
+                  <tr><td>Seg 25/01</td><td>19h30 Área toda · 20h30 Jovens + Louvor e Dança</td><td>Integração, Anciões, Jovens e Louvor</td><td>Ajustes recolhidos</td></tr>
+                  <tr><td>Qui 28/01</td><td>Área toda</td><td>Diretrizes gerais e envio</td><td>Todos alinhados; consagração em fevereiro</td></tr>
                 </tbody>
               </table>
             </div>
@@ -714,7 +715,7 @@ window.AREA71_DATA = (function () {
         },
         {
           title: 'Campanha de Oração × Escola: choques de agenda',
-          badge: 'Decisão de Agenda',
+          badge: 'Decidido',
           content: `
             <p class="text-sm mb-2">A Campanha de Oração vai de <strong>04 a 15/01</strong>, todos os dias, das 10h à meia-noite (a princípio), na Congregação 09. Terça e domingo há culto em cada congregação local. Caem dentro dela:</p>
             <ul class="space-y-1.5 text-sm list-disc pl-5">
@@ -724,7 +725,7 @@ window.AREA71_DATA = (function () {
               <li>Aula 2: <strong>11/01</strong></li>
               <li>Aula 3 (Mapa de Liderança): <strong>14/01</strong></li>
             </ul>
-            <p class="text-sm mt-2">Caminhos a escolher: (A) a Campanha pausa à noite nos dias de escola; (B) a escola acontece na própria Congregação 09, no horário da Campanha; (C) outro arranjo definido pelo pastor.</p>
+            <p class="text-sm mt-2"><strong>Decidido:</strong> a Campanha é um propósito inquebrável e segue normalmente. Nas terças e domingos ela continua depois do culto de cada congregação; no Fruto Fiel (09/01), depois do Fruto Fiel; nas noites da Escola, a Campanha segue e a Escola entra no dia (a confirmar o encaixe do horário das 19h30).</p>
           `
         },
         {
@@ -751,8 +752,8 @@ window.AREA71_DATA = (function () {
         }
       ],
       checklist: [
-        'Definir como a Campanha (04 a 15/01) convive com as noites 07, 11 e 14/01',
-        'Confirmar o formato da noite de 28/01 (Área toda ou por rede)',
+        'Fechar o horário da Escola dentro do dia da Campanha (07, 11 e 14/01), que segue normalmente',
+        'Conversar individualmente com cada líder antes da consagração (primeiro Fruto Fiel de fevereiro)',
         'Definir onde entra a Rede de Kids e Famílias nas quintas',
         'Definir a regra de frequência e preparar o Cartão de Compromisso (07/01)',
         'Definir quem ministra cada noite (Direção ou líderes de rede)',
@@ -1976,7 +1977,7 @@ window.AREA71_DATA = (function () {
           bullets: [
             'Terça e domingo: culto em cada congregação local; no restante do dia, uma só congregação (a 09).',
             'Cada dia pode consagrar uma Porta ou um mês de 2027.',
-            'Choque de agenda: Reunião do Ministério (06/01), Fruto Fiel (09/01) e as noites da Escola (07, 11 e 14/01) caem dentro da Campanha.',
+            'A Campanha segue em todos os dias, inclusive nas noites da Escola (07, 11, 14/01). Nas terças e domingos continua depois do culto local; no Fruto Fiel (09/01), depois dele.',
             'Encerramento em 15/01, véspera da primeira noite sem Campanha.'
           ]
         },

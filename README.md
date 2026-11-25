@@ -4,7 +4,7 @@ Portal estratégico interativo construído com arquitetura **Motion Design** par
 
 ## Destaques da Estrutura
 
-- **11 Capítulos Integrados:** Visão Geral, As 12 Portas, Escola Afiando o Machado, 5 Redes Geracionais (Mulheres, Jovens, Homens, Geração 60+ e Kids & Famílias), Seminário de Louvor, Células & Evangelismo e Ensino, Oração & Vigília.
+- **12 Capítulos Integrados:** Visão Geral, As 12 Portas, Escola Afiando o Machado (7 noites), 5 Redes Geracionais (Mulheres, Jovens, Homens, Geração 60+ e Kids & Famílias), Seminário de Louvor, Células & Evangelismo e Ensino, Oração & Vigília e Intercessão.
 - **Bússola Orbital 360° das 12 Portas:** Navegação radial interativa pelos 12 meses de 2027, datas fixas e marcos.
 - **Motor de Motion:** Canvas vivo de aurora + partículas reativas, smooth scroll (Lenis), animações sincronizadas no scroll (GSAP + ScrollTrigger), spotlight tracking, micro 3D tilt, botões magnéticos e cortina cinematográfica entre capítulos.
 - **Modo Palco / Keynote (`P`):** Visual limpo para projetor e telão, navegação por setas (`←` `→`) e troca de fases (`1`–`4`).

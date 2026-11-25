@@ -41,7 +41,7 @@ window.AREA71_DATA = (function () {
       id: 'pilares',
       label: 'Eventos & Pilares',
       shortLabel: 'Eventos',
-      ids: ['louvor', 'celulas', 'ensino-oracao']
+      ids: ['louvor', 'celulas', 'ensino-oracao', 'intercessao']
     }
   ];
 
@@ -59,9 +59,9 @@ window.AREA71_DATA = (function () {
       frutoFiel: '09/01/2027',
       reuniaoMin: '06/01/2027',
       marcos: [
-        'Campanha de Oração (12 dias): 09 a 20/01',
+        'Campanha de Oração (12 dias): 04 a 15/01 · 10h–00h · Congregação 09',
         'Reunião de Pastores IEADAM: 20/01',
-        'Escola "Afiando o Machado" (data a definir)'
+        'Escola "Afiando o Machado": 7 noites, 07 a 28/01 · 19h30–21h30 (seg e qui)'
       ],
       color: '#F59E0B',
       color2: '#EA580C',
@@ -307,7 +307,7 @@ window.AREA71_DATA = (function () {
     {
       evento: 'Escola "Afiando o Machado"',
       mes: 'Janeiro',
-      obs: 'Sugestão: 22–23/01 ou 30/01 (pós Campanha 12 dias)',
+      obs: 'Datas e encaixe definidos (07 a 28/01). A Campanha segue todos os dias; a Escola acontece dentro dela nas noites 07, 11 e 14/01',
       targetPage: 'afiando-machado'
     },
     {
@@ -344,6 +344,12 @@ window.AREA71_DATA = (function () {
 
   const CONFLITOS_IEADAM = [
     {
+      data: '04 a 15/01/2027 · Campanha de Oração',
+      titulo: 'Campanha × Escola, Reunião do Ministério e Fruto Fiel',
+      desc: 'Decidido: a Campanha (propósito inquebrável) segue todos os dias. Nas terças e domingos continua depois do culto de cada congregação; no Fruto Fiel (09/01) continua depois dele. Nas noites da Escola (07, 11 e 14/01) a Campanha segue normalmente. Falta só fechar o horário da Escola dentro do dia.',
+      targetPage: 'afiando-machado'
+    },
+    {
       data: '06/11/2027 · Sábado',
       titulo: 'Fruto Fiel × Congresso Somos Jovens',
       desc: 'Alinhar horário (ex.: Fruto Fiel pela manhã ou antecipação) para liberar 100% da juventude ao Congresso IEADAM.',
@@ -358,7 +364,7 @@ window.AREA71_DATA = (function () {
   ];
 
   /* ------------------------------------------------------------------------
-     5. AS 11 PÁGINAS COMPLETAS DO PORTAL (COM ASSINATURA VISUAL PRÓPRIA)
+     5. AS 12 PÁGINAS COMPLETAS DO PORTAL (COM ASSINATURA VISUAL PRÓPRIA)
      ------------------------------------------------------------------------ */
   const PAGES = {
     'visao-geral': {
@@ -393,7 +399,7 @@ window.AREA71_DATA = (function () {
       checklist: [
         'Apresentar o Portal Visão 2027 na reunião estratégica de liderança da Área 71',
         'Validar coordenadores-âncora para cada uma das 5 Redes Geracionais',
-        'Definir as datas das 6 ações pendentes (Afiando o Machado, Retiro Jovem, Seminário de Louvor, Batalha Espiritual, Vigília e Entrega dos Cargos)',
+        'Definir as datas das ações pendentes (Retiro Jovem, Seminário de Louvor, Batalha Espiritual, Vigília e Entrega dos Cargos) e fechar o encaixe da Campanha com a Escola',
         'Alinhar com o Núcleo 17 os dois sábados de sobreposição (06/11 e 04/12)',
         'Publicar o calendário anual sincronizado nas congregações e células da Área 71'
       ]
@@ -492,119 +498,268 @@ window.AREA71_DATA = (function () {
         rgb2: '245, 158, 11',
         gradient: 'linear-gradient(125deg, #431407 0%, #9A3412 45%, #D97706 85%, #1C1917 100%)'
       },
-      subtitle: 'Equipar, alinhar e renovar toda a liderança da Área 71 em Janeiro para trabalhar com sabedoria espiritual, clareza estratégica e zero exaustão.',
-      keywords: 'afiando o machado escola lideranca janeiro porta das ovelhas eclesiastes oficina mesas redondas capacitacao',
+      subtitle: 'Sete noites de janeiro (07 a 28/01, 19h30 às 21h30) para alinhar a visão, formar a liderança e apresentar as diretrizes gerais da Área para 2027. Segunda-feira reúne a Área toda; quinta-feira é por divisão.',
+      keywords: 'afiando o machado escola lideranca janeiro porta das ovelhas eclesiastes segunda quinta 19h30 abertura mapa de lideranca visao celular redes diretrizes gerais consagracao fruto fiel campanha',
       properties: [
         { label: 'Mês-Âncora / Porta', value: 'Janeiro · Porta das Ovelhas' },
-        { label: 'Público-Alvo', value: 'Pastores, Obreiros, Líderes de Célula e Coordenadores de Redes' },
-        { label: 'Formato Sugerido', value: '60% Visão & Ministração + 40% Mesas Redondas Práticas' },
-        { label: 'Status 2027', value: 'Data em Janeiro a definir (pós Campanha 09–20/01 ou final de semana)' }
+        { label: 'Calendário', value: '7 noites · Qui 07, Seg 11, Qui 14, Seg 18, Qui 21, Seg 25, Qui 28/01' },
+        { label: 'Horário', value: '19h30 às 21h30' },
+        { label: 'Regra da semana', value: 'Segunda = Área toda · Quinta = dinâmicas por divisão (exceção: abertura em 07/01)' },
+        { label: 'Público-Alvo', value: 'Pastores, obreiros, líderes de célula, coordenadores de redes e candidatos a líder' },
+        { label: 'Status 2027', value: 'Desenho aprovado · Campanha segue normalmente nos dias de Escola · horários finos a fechar' }
       ],
       callout: {
         verse: '“Se estiver embotado o ferro, e não se afiar o corte, então se deve redobrar a força; mas a sabedoria é excelente para dirigir.”',
         ref: 'Eclesiastes 10:10',
-        note: 'O líder cansado muitas vezes não está trabalhando demais — está cortando com o machado cego. Janeiro é o mês de parar, afiar a visão, corrigir rotas e devolver alegria ao serviço.'
+        note: 'O líder cansado muitas vezes não está trabalhando demais, está cortando com o machado cego. Janeiro é o mês de estruturar: afiar a visão, mapear quem serve e quem falta, e apresentar as diretrizes gerais para 2027.'
       },
       pillars: [
         {
           icon: 'flame',
           title: 'Coração no Altar (Caráter)',
-          desc: 'Antes de cobrar metas, restaurar o primeiro amor, a vida devocional e a saúde emocional de quem serve na linha de frente.'
-        },
-        {
-          icon: 'target',
-          title: 'Clareza de Processo (Igreja Simples)',
-          desc: 'Todo líder entende exatamente como uma pessoa entra na Área 71, é cuidada na célula, amadurece na EBD e se torna discipulador.'
+          desc: 'Antes de cobrar metas, restaurar o primeiro amor, a vida devocional e a saúde de quem serve na linha de frente. Sem unção, a estrutura vira só técnica.'
         },
         {
           icon: 'users',
-          title: 'Mesas Redondas por Rede',
-          desc: 'Saímos do modelo 100% palestra: cada rede senta junto para diagnosticar gargalos e entregar seu plano prático de 1 página para 2027.'
+          title: 'Segunda: Área toda · Quinta: Divisões',
+          desc: 'Nas segundas toda a Área 71 ouve a mesma visão. Nas quintas cada rede e ministério trabalha o seu tema em sala própria.'
+        },
+        {
+          icon: 'target',
+          title: 'Mapa de Liderança',
+          desc: 'Janeiro é mês de estruturação: muitos ministérios ainda não têm líder. A escola mapeia as vagas e forma quem vai assumi-las.'
         },
         {
           icon: 'clock',
-          title: 'Continuidade o Ano Inteiro',
-          desc: 'Para a chama não apagar em março, cada Reunião do Ministério mensal terá 15 minutos fixos de "Pílula Afiando o Machado".'
+          title: 'Diretrizes gerais, sem entrega individual',
+          desc: 'A Direção apresenta as diretrizes gerais da Área. Quem lidera cada setor é tratado em conversa individual com o pastor, fora da pauta. A consagração oficial da liderança, local e geral, acontece no primeiro Fruto Fiel de fevereiro.'
         }
       ],
-      phasesTitle: 'Arquitetura dos 4 Módulos da Escola',
+      phasesTitle: 'As 7 Noites da Escola (19h30 às 21h30)',
       phases: [
         {
-          tab: 'Módulo 1 · Visão',
-          period: 'Sessão de Abertura',
-          title: 'O Machado Afiado e a Visão das 12 Portas 2027',
-          summary: 'Nivelamento teológico e estratégico de toda a Área 71 para que pastores, células e redes caminhem sob a mesma voz.',
+          tab: 'Aula 1 · Abertura',
+          period: 'Qui 07/01 · 19h30–21h30',
+          title: 'Reunião de Abertura: o Machado Afiado',
+          summary: 'Público: Área toda (exceção à regra das quintas). Objetivo: explicar tudo o que vai acontecer, ministrar sobre a importância de a ferramenta estar afiada e pedir o compromisso de não faltar.',
           bullets: [
-            'Ministração pastoral em Eclesiastes 10:10: a diferença entre ativismo exaustivo e frutificação guiada pelo Espírito.',
-            'Apresentação oficial do mapa anual das 12 Portas e das datas-âncora da IEADAM e Núcleo 17.',
-            'Aliança de unidade entre púlpito, células, EBD e departamentos.'
+            'Começo: boas-vindas, oração e a pergunta da noite: por que uma escola de liderança agora?',
+            'Meio, parte 1: apresentar as 7 noites, a regra segunda = Área toda e quinta = divisões, e o conceito da escola.',
+            'Meio, parte 2: agenda, horários e frequência (regra de presença a definir pelo pastor).',
+            'Meio, parte 3: ministração em Eclesiastes 10:10 e Neemias 3:1 (Porta das Ovelhas): a diferença entre ativismo e sabedoria que afia a ferramenta.',
+            'Fim: pedir o compromisso de não faltar (cartão de compromisso) e ministração no altar.',
+            'Atenção: esta noite cai dentro da Campanha de Oração (04 a 15/01). Encaixe a definir.'
           ]
         },
         {
-          tab: 'Módulo 2 · Pessoas',
-          period: 'Cultura de Cuidado',
-          title: 'Pipeline de Liderança & Funil das 48 Horas',
-          summary: 'Como fechar a "porta dos fundos" da igreja e levantar novos líderes sem sobrecarregar os mesmos obreiros de sempre.',
+          tab: 'Aula 2 · Visão do Ano',
+          period: 'Seg 11/01 · 19h30–21h30',
+          title: 'Caráter e Chamado do Líder + a Visão do Ano (12 Portas)',
+          summary: 'Público: Área toda. Primeiro o coração do líder, depois o mapa do ano: as 12 Portas de Neemias mês a mês e onde cada rede aparece.',
           bullets: [
-            'Mapeamento da jornada do visitante: o que acontece nas primeiras 48 horas após a visita ou decisão.',
-            'Formação prática de sucessores: todo líder de rede ou célula com pelo menos 1 auxiliar em treinamento.',
-            'Prevenção de burnout ministerial: limites saudáveis, delegação e cuidado pastoral dos líderes.'
+            'Caráter e chamado: quem é o líder diante de Deus antes de ser líder diante das pessoas.',
+            'Neemias 2:17-18: levantar-se e edificar. As 12 Portas, o calendário 2027 e as datas-âncora da IEADAM.',
+            'O papel de cada rede e ministério em cada Porta (visão geral, sem entrar ainda nos projetos).',
+            'Entrega da noite: calendário 2027 na mão de cada líder.',
+            'Atenção: noite dentro da Campanha de Oração (04 a 15/01). Encaixe a definir.'
           ]
         },
         {
-          tab: 'Módulo 3 · Oficinas',
-          period: '40% Prática em Mesas',
-          title: 'Mesas Redondas por Rede Geracional & Células',
-          summary: 'Momento mão na massa: líderes agrupados por frente (Mulheres, Jovens, Homens, 60+, Kids, Louvor e Células).',
+          tab: 'Aula 3 · Mapa de Liderança',
+          period: 'Qui 14/01 · 19h30–21h30',
+          title: 'Mapa de Liderança por Rede e Ministério',
+          summary: 'Público: por divisão, cada rede e ministério em uma sala. Objetivo: enxergar com honestidade quem serve hoje, quais funções estão vagas e quem pode ser levantado.',
           bullets: [
-            'Pergunta 1 da Mesa: Qual é o maior gargalo real da nossa rede hoje?',
-            'Pergunta 2 da Mesa: Quais 2 ações de alto impacto vamos rodar no 1º semestre?',
-            'Pergunta 3 da Mesa: Quem estamos discipulando este ano para assumir novas frentes?',
-            'Entrega ao final da oficina: Folha de 1 página ("Termo de Compromisso 2027") assinada pela equipe.'
+            'Pergunta 1: Quem temos hoje em cada função?',
+            'Pergunta 2: Quais funções estão vagas (inclusive líder de intercessão e responsável por congregação)?',
+            'Pergunta 3: Quem são os candidatos a líder em treinamento?',
+            'Critério de escolha: Êxodo 18:21 (homens capazes, que temem a Deus, verdadeiros, inimigos da avareza), a base do modelo de Jetro.',
+            'Resultado: a Direção chega ao dia 28 com o mapa completo para conversar individualmente com cada líder.',
+            'Fim da noite: oração de consagração, na véspera do encerramento da Campanha (15/01).'
           ]
         },
         {
-          tab: 'Módulo 4 · Envio',
-          period: 'Consagração & Ritual Mensal',
-          title: 'Unção da Liderança e Sistema de Acompanhamento',
-          summary: 'Encerramento com imposição de mãos e ativação do acompanhamento mensal que garante execução durante todo o ano.',
+          tab: 'Aula 4 · Visão Celular',
+          period: 'Seg 18/01 · 19h30–21h30',
+          title: 'Visão Celular: Fundamento, Funções e Multiplicação',
+          summary: 'Público: Área toda. Uma definição única de célula para a Área 71: o que é, o que não é, quem faz o quê e como a multiplicação acontece.',
           bullets: [
-            'Momento de consagração, ceia/oração pelos líderes e suas famílias.',
-            'Definição dos 3 indicadores simples acompanhados mês a mês (presença, visitantes integrados e líderes em formação).',
-            'Ativação da "Pílula de 15 minutos" na Reunião do Ministério antes de cada Fruto Fiel.'
+            'Fundamento: por que células (Atos 2:46, Êxodo 18), igreja em células ou igreja com células, célula e celebração.',
+            'O que é e o que não é célula; tamanho, comunhão, multiplicação e serviço mútuo.',
+            'Funções: líder, líder em treinamento, anfitrião, discipulador e pastor de rede.',
+            'Ciclo de crescimento e formas de multiplicação, ligado à Porta de Efraim (Setembro).',
+            'Base de leitura: Manual da Visão Celular (Aluízio Silva). É um modelo de referência: a Área 71 decide o que adota.'
+          ]
+        },
+        {
+          tab: 'Aula 5 · Homens e Mulheres',
+          period: 'Qui 21/01 · 19h30–21h30',
+          title: 'Noite das Redes I: Rede de Homens e Rede de Mulheres',
+          summary: 'Público: por divisão, em duas salas paralelas. A Direção apresenta o conceito e o projeto de cada rede para 2027 e recolhe os ajustes.',
+          bullets: [
+            'Rede de Homens: conceito, projeto do ano e mês-chave (Porta da Fonte, Congresso de Homens IEADAM em 08/05).',
+            'Rede de Mulheres: conceito, projeto do ano e mês-chave (Porta do Monturo em Junho; Congresso de Mulheres IEADAM em 28/08).',
+            'Em cada sala: o que sabemos hoje, o que vamos construir no 1º semestre e quem lidera.',
+            'Entrega: ajustes recolhidos de cada rede, para alimentar as diretrizes gerais.'
+          ]
+        },
+        {
+          tab: 'Aula 6 · Jovens, Louvor e 60+',
+          period: 'Seg 25/01 · 19h30–21h30',
+          title: 'Integração da Área + Jovens com Louvor e Dança',
+          summary: 'Primeira hora com a Área toda; segunda hora por divisão, com Jovens e Louvor e Dança juntos.',
+          bullets: [
+            '19h30 às 20h30 (Área toda): integração das redes e apresentação do conceito da Rede dos Anciões (Geração 60+). Momento de honrar os mais velhos diante de todos.',
+            '20h30 às 21h30 (divisão): Jovens e Louvor e Dança juntos. Conceito, projeto do ano e mês-chave de cada um (Jovens: Fevereiro, Setembro e Novembro; Louvor: Seminário na Porta Velha, em Abril).',
+            'Entrega: ajustes recolhidos de Jovens e de Louvor e Dança.'
+          ]
+        },
+        {
+          tab: 'Aula 7 · Diretrizes e Envio',
+          period: 'Qui 28/01 · 19h30–21h30',
+          title: 'Diretrizes Gerais e Envio',
+          summary: 'Sem entrega de direções individuais. O pastor passa as diretrizes gerais para 2027. As conversas individuais sobre quem sai ou permanece na liderança acontecem à parte e não entram na pauta. A consagração oficial da liderança, local e geral, é no primeiro Fruto Fiel de fevereiro.',
+          bullets: [
+            'Diretrizes gerais da Área 71 para 2027, para todos juntos.',
+            'Janeiro é mês de estruturação: ministérios ainda sem líder serão tratados em conversa individual, não em plenário.',
+            'Aviso: consagração oficial da liderança no primeiro Fruto Fiel de fevereiro (data a confirmar no calendário).',
+            'Apresentação da Reassunção dos cargos a partir de 01/02.',
+            'Consagração e oração de envio (ceia e imposição de mãos, a critério do pastor).'
           ]
         }
       ],
       toggles: [
         {
-          title: 'Sugestão de Datas na Agenda de Janeiro 2027',
-          badge: 'Decisão de Agenda',
+          title: 'Quadro das 7 Noites',
+          badge: 'Visão rápida',
           content: `
-            <p class="text-sm mb-2">Considerando a Campanha de Oração de 12 dias (<strong>09/01 a 20/01</strong>) e a Reunião de Pastores IEADAM (<strong>20/01</strong>), temos dois cenários limpos:</p>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead><tr><th>Data</th><th>Público</th><th>Tema</th><th>Entrega da noite</th></tr></thead>
+                <tbody>
+                  <tr><td>Qui 07/01</td><td>Área toda</td><td>Abertura: o machado afiado</td><td>Compromisso assumido</td></tr>
+                  <tr><td>Seg 11/01</td><td>Área toda</td><td>Caráter e chamado + visão do ano</td><td>Calendário 2027</td></tr>
+                  <tr><td>Qui 14/01</td><td>Divisões</td><td>Mapa de liderança</td><td>Vagas e candidatos mapeados</td></tr>
+                  <tr><td>Seg 18/01</td><td>Área toda</td><td>Visão celular</td><td>Definição única de célula</td></tr>
+                  <tr><td>Qui 21/01</td><td>Divisões</td><td>Homens e Mulheres</td><td>Ajustes das duas redes</td></tr>
+                  <tr><td>Seg 25/01</td><td>19h30 Área toda · 20h30 Jovens + Louvor e Dança</td><td>Integração, Anciões, Jovens e Louvor</td><td>Ajustes recolhidos</td></tr>
+                  <tr><td>Qui 28/01</td><td>Área toda</td><td>Diretrizes gerais e envio</td><td>Todos alinhados; consagração em fevereiro</td></tr>
+                </tbody>
+              </table>
+            </div>
+          `
+        },
+        {
+          title: 'Estratégia por Setor (rascunho para definição)',
+          badge: 'Redes e Ministérios',
+          content: `
+            <p class="text-sm mb-2">Cada setor chega ao dia 28 com a mesma ficha: conceito, projeto de 2027, mês-chave e liderança. Os conceitos abaixo são os que já estão no portal; o que muda é decidido pelo pastor.</p>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead><tr><th>Setor</th><th>Conceito de partida (portal)</th><th>Noite</th><th>Mês-chave</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Homens</strong></td><td>Despertar homens da passividade espiritual: sacerdócio do lar, integridade e liderança no Reino.</td><td>21/01</td><td>Maio · Congresso de Homens (08/05)</td></tr>
+                  <tr><td><strong>Mulheres</strong></td><td>Mulheres curadas, firmes na Palavra, intercessoras pelo lar e discipuladoras (mentoria Tito 2).</td><td>21/01</td><td>Junho (Porta do Monturo) · Congresso 28/08</td></tr>
+                  <tr><td><strong>Jovens</strong></td><td>Geração apaixonada por Jesus, biblicamente sólida, comprometida com evangelismo, células e serviço.</td><td>25/01</td><td>Fev, Set e Nov</td></tr>
+                  <tr><td><strong>Louvor e Dança</strong></td><td>Resgatar a essência bíblica da adoração: doutrina, santidade no altar e excelência técnica.</td><td>25/01</td><td>Abril · Seminário de Louvor</td></tr>
+                  <tr><td><strong>Geração 60+ (Anciões)</strong></td><td>Honrar, cuidar e ativar os mais velhos como guardiões de oração, sabedoria e mentoria.</td><td>25/01 (conceito)</td><td>Jun a Set · Torre de Intercessão</td></tr>
+                  <tr><td><strong>Kids e Famílias</strong></td><td>Crianças apaixonadas por Jesus: a luz da igreja unida ao amor da família.</td><td>A definir</td><td>Julho · EBF</td></tr>
+                  <tr><td><strong>Intercessão</strong></td><td>Ministério transversal que sustenta todas as redes (veja o capítulo 12).</td><td>14/01 (liderança)</td><td>Janeiro e Agosto · Campanhas</td></tr>
+                  <tr><td><strong>Células</strong></td><td>Evangelismo relacional, retenção em 48 horas e multiplicação saudável.</td><td>18/01</td><td>Março e Setembro</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="text-xs muted-note mt-2">Pendência: onde entra a Rede de Kids e Famílias nas quintas (07 e 14/01 foram reorganizadas).</p>
+          `
+        },
+        {
+          title: 'Estrutura de Liderança: Redes, Ministérios e Células',
+          badge: 'Distribuição',
+          content: `
             <ul class="space-y-1.5 text-sm list-disc pl-5">
-              <li><strong>Opção A (Intensivo de Fim de Semana — Recomendada):</strong> Sexta 22/01 (noite) e Sábado 23/01 (manhã e tarde), logo após o encerramento dos 12 dias de oração — liderança já aquecida espiritualmente.</li>
-              <li><strong>Opção B (Sábado Único + Noite de Envio):</strong> Sábado 30/01 (8h30 às 17h) fechando a Porta das Ovelhas com chave de ouro antes da volta aos cargos em Fevereiro.</li>
+              <li><strong>Redes (por público):</strong> Homens, Mulheres, Jovens, Kids e Famílias, Geração 60+. Um líder por rede.</li>
+              <li><strong>Ministérios (por função):</strong> Louvor e Dança, Intercessão e os demais que o pastor definir. Um líder por ministério.</li>
+              <li><strong>Células (nas casas):</strong> líder, líder em treinamento, anfitrião, discipulador e pastor de rede.</li>
+              <li><strong>Intercessão é transversal:</strong> atravessa todas as redes e as congregações. Proposta: um líder de intercessão da Área e um responsável por congregação.</li>
+            </ul>
+            <p class="text-xs muted-note mt-2">Decisão pendente: um líder de intercessão único para a Área ou um por congregação com coordenador acima.</p>
+          `
+        },
+        {
+          title: 'Roteiro da Noite de Abertura (07/01) com tempos',
+          badge: 'Proposta',
+          content: `
+            <ol class="space-y-1.5 text-sm list-decimal pl-5">
+              <li><strong>19h30 · Acolhimento e oração</strong> (10 min).</li>
+              <li><strong>19h40 · Por que uma escola de liderança agora?</strong> O conceito de Afiando o Machado (15 min).</li>
+              <li><strong>19h55 · As 7 noites, a agenda e a frequência:</strong> segunda = Área toda, quinta = divisões (20 min).</li>
+              <li><strong>20h15 · Pausa de comunhão</strong> (10 min).</li>
+              <li><strong>20h25 · Ministração:</strong> a ferramenta precisa estar afiada, com Eclesiastes 10:10 e Neemias 3:1 (35 min).</li>
+              <li><strong>21h00 · Compromisso:</strong> cartão de compromisso e pedido de presença (15 min).</li>
+              <li><strong>21h15 · Altar:</strong> oração e consagração (15 min).</li>
+            </ol>
+            <p class="text-xs muted-note mt-2">Os tempos são uma sugestão. Se a noite acontecer dentro da Campanha, ajustar ao horário combinado com a Congregação 09.</p>
+          `
+        },
+        {
+          title: 'Frequência e Compromisso (decisões do pastor)',
+          badge: 'Decisão',
+          content: `
+            <ul class="space-y-1.5 text-sm list-disc pl-5">
+              <li>Presença mínima para receber função na estrutura de 2027 (sugestão a avaliar: 5 das 7 noites).</li>
+              <li>Registro de presença por noite (lista ou cartão).</li>
+              <li>Cartão de Compromisso assinado na abertura (07/01).</li>
+              <li>Como tratar quem faltar: acompanhamento pelo discipulador ou pastor de rede.</li>
             </ul>
           `
         },
         {
-          title: 'Roteiro da Pílula Mensal (15 min na Reunião do Ministério)',
+          title: 'Campanha de Oração × Escola: choques de agenda',
+          badge: 'Decidido',
+          content: `
+            <p class="text-sm mb-2">A Campanha de Oração vai de <strong>04 a 15/01</strong>, todos os dias, das 10h à meia-noite (a princípio), na Congregação 09. Terça e domingo há culto em cada congregação local. Caem dentro dela:</p>
+            <ul class="space-y-1.5 text-sm list-disc pl-5">
+              <li>Reunião do Ministério: <strong>06/01</strong></li>
+              <li>Aula 1 (abertura): <strong>07/01</strong></li>
+              <li>Fruto Fiel: <strong>09/01</strong></li>
+              <li>Aula 2: <strong>11/01</strong></li>
+              <li>Aula 3 (Mapa de Liderança): <strong>14/01</strong></li>
+            </ul>
+            <p class="text-sm mt-2"><strong>Decidido:</strong> a Campanha é um propósito inquebrável e segue normalmente. Nas terças e domingos ela continua depois do culto de cada congregação; no Fruto Fiel (09/01), depois do Fruto Fiel; nas noites da Escola, a Campanha segue e a Escola entra no dia (a confirmar o encaixe do horário das 19h30).</p>
+          `
+        },
+        {
+          title: 'Pílula Mensal "Afiando o Machado" (15 min na Reunião do Ministério)',
           badge: 'Continuidade',
           content: `
             <ol class="space-y-1.5 text-sm list-decimal pl-5">
-              <li><strong>5 min — Celebração:</strong> Um testemunho real de transformação ou multiplicação ocorrido no mês anterior.</li>
-              <li><strong>5 min — Ferramenta:</strong> Uma dica prática de liderança, cuidado pastoral ou evangelismo alinhada à Porta do mês.</li>
-              <li><strong>5 min — Painel:</strong> Checagem rápida das próximas datas do mês e oração pelas redes em destaque.</li>
+              <li><strong>5 min · Celebração:</strong> um testemunho real de transformação ou multiplicação do mês anterior.</li>
+              <li><strong>5 min · Ferramenta:</strong> uma dica prática de liderança, cuidado pastoral ou evangelismo alinhada à Porta do mês.</li>
+              <li><strong>5 min · Painel:</strong> checagem das datas do mês e oração pelas redes em destaque.</li>
             </ol>
+          `
+        },
+        {
+          title: 'Bases de Leitura (biblioteca de estudos)',
+          badge: 'Fontes',
+          content: `
+            <ul class="space-y-1.5 text-sm list-disc pl-5">
+              <li><strong>Lido e usado:</strong> Manual da Visão Celular (Aluízio Silva), para as aulas 4 e de estrutura de liderança.</li>
+              <li><strong>Na biblioteca, ainda a ler para as redes:</strong> Homem ao Máximo (Edwin Louis Cole), O Poder da Mulher que Ora (Stormie Omartian), Liderança Espiritual (J. Oswald Sanders), A Segunda Reforma (William A. Beckham), Igreja Simples (Rainer e Geiger).</li>
+            </ul>
+            <p class="text-xs muted-note mt-2">Os modelos dos livros são referência. A decisão teológica e a adoção são da liderança da Área 71.</p>
           `
         }
       ],
       checklist: [
-        'Bater o martelo na data da Escola em Janeiro (22–23/01 ou 30/01)',
-        'Definir preletores dos Módulos 1 e 2 e facilitadores das 6 Mesas Redondas',
-        'Imprimir a folha de "Plano de 1 Página por Rede" e cadernos de anotação',
-        'Organizar coffee break de comunhão para fortalecer o vínculo entre obreiros',
-        'Criar grupo/canal de envio do resumo pós-escola para toda a liderança'
+        'Fechar o horário da Escola dentro do dia da Campanha (07, 11 e 14/01), que segue normalmente',
+        'Conversar individualmente com cada líder antes da consagração (primeiro Fruto Fiel de fevereiro)',
+        'Definir onde entra a Rede de Kids e Famílias nas quintas',
+        'Definir a regra de frequência e preparar o Cartão de Compromisso (07/01)',
+        'Definir quem ministra cada noite (Direção ou líderes de rede)',
+        'Preparar a ficha de direção por setor: conceito, projeto 2027, mês-chave e liderança',
+        'Montar a planilha do Mapa de Liderança para as salas de 14/01',
+        'Criar grupo ou canal de envio do resumo pós-escola para toda a liderança'
       ]
     },
 
@@ -1614,7 +1769,7 @@ window.AREA71_DATA = (function () {
       properties: [
         { label: 'EBD 2027', value: 'Início 07/02 · Domingos 8h · 47 Domingos · 4 Revistas' },
         { label: 'Culto de Ensino', value: 'Todas as Terças-feiras às 19h30' },
-        { label: 'Campanhas de Oração', value: '12 Dias (09–20/01) · Batalha Espiritual (Ago, antes 28/08)' },
+        { label: 'Campanhas de Oração', value: '12 Dias (04–15/01) · Batalha Espiritual (Ago, antes 28/08)' },
         { label: 'Vigília Área 71', value: 'Obrigação anual IEADAM por área — Data 2027 a definir' }
       ],
       callout: {
@@ -1636,7 +1791,7 @@ window.AREA71_DATA = (function () {
         {
           icon: 'flame',
           title: 'Campanhas de Oração & Guerra',
-          desc: 'Abertura do ano com 12 dias de clamor (09 a 20/01) e Campanha de Batalha Espiritual em Agosto (Efésios 6:10–18) encerrando antes de 28/08.'
+          desc: 'Abertura do ano com 12 dias de clamor (04 a 15/01) e Campanha de Batalha Espiritual em Agosto (Efésios 6:10–18) encerrando antes de 28/08.'
         },
         {
           icon: 'shield',
@@ -1652,7 +1807,7 @@ window.AREA71_DATA = (function () {
           title: '12 Dias de Oração e Abertura da EBD 2027',
           summary: 'Consagrar o ano na Porta das Ovelhas e lançar a primeira revista da Escola Bíblica Dominical.',
           bullets: [
-            '09/01 a 20/01: Campanha de Oração de 12 dias (cada dia consagrando 1 mês/Porta de 2027).',
+            '04/01 a 15/01: Campanha de Oração de 12 dias (cada dia consagrando 1 mês/Porta de 2027).',
             '07/02/2027: Início oficial da EBD na Área 71 (8h) — Revista 1 · Lição 1.',
             'Preenchimento prévio da planilha de títulos e textos bíblicos das lições com a equipe de professores.'
           ]
@@ -1731,10 +1886,159 @@ window.AREA71_DATA = (function () {
       ],
       checklist: [
         'Preencher os títulos das lições e textos bíblicos das 47 aulas na planilha EBD 2027',
-        'Preparar o roteiro dos 12 dias da Campanha de Oração de Janeiro (09 a 20/01)',
+        'Preparar o roteiro dos 12 dias da Campanha de Oração de Janeiro (04 a 15/01)',
         'Definir a data exata da Campanha de Batalha Espiritual em Agosto (encerrando antes de 28/08)',
         'Escolher a data da Vigília Anual da Área 71 (Maio ou Agosto) e montar escala de turnos',
         'Organizar o formato festivo dos 3 Aulões da EBD (09/05, 15/08 e 21/11)'
+      ]
+    },
+    'intercessao': {
+      id: 'intercessao',
+      chapterNum: '12',
+      group: 'pilares',
+      shortTitle: 'Intercessão & Círculos de Oração',
+      title: 'Ministério de Intercessão · Círculos de Oração e Campanhas',
+      category: 'Eventos & Pilares',
+      icon: 'flame',
+      theme: {
+        accent: '#818CF8',
+        accent2: '#F59E0B',
+        rgb: '129, 140, 248',
+        rgb2: '245, 158, 11',
+        gradient: 'linear-gradient(125deg, #0B1020 0%, #312E81 46%, #4F46E5 76%, #B58425 100%)'
+      },
+      subtitle: 'O ministério transversal que sustenta todas as redes: um líder de intercessão, círculos de oração que continuam entre as campanhas e as duas grandes campanhas do ano.',
+      keywords: 'intercessao ministerio lider circulo de oracao campanha oracao janeiro agosto batalha espiritual torre de intercessao vigilia congregacao',
+      properties: [
+        { label: 'Natureza', value: 'Ministério transversal: atravessa as redes e as congregações da Área 71' },
+        { label: 'Liderança', value: 'Líder de intercessão da Área (a nomear) + responsável por congregação (modelo a confirmar)' },
+        { label: 'Campanha de Janeiro', value: '04 a 15/01 · 12 dias · 10h às 00h (a princípio) · Congregação 09 · Terça e domingo: culto em cada congregação local' },
+        { label: 'Campanha de Agosto', value: 'Batalha Espiritual (Efésios 6:10-18) · data a definir, fechando antes de 28/08' },
+        { label: 'Status', value: 'Em desenho: conceitos serão aprofundados na montagem das páginas' }
+      ],
+      callout: {
+        verse: '“Todos estes perseveravam unanimemente em oração e súplicas.”',
+        ref: 'Atos 1:14',
+        note: 'A igreja nasce orando. A estrutura, os projetos e as redes só se sustentam se houver quem permaneça no altar por elas.'
+      },
+      pillars: [
+        {
+          icon: 'shield',
+          title: 'Líder de Intercessão',
+          desc: 'Uma liderança definida para o ministério: coordena as campanhas, acompanha os círculos e mantém a cobertura de oração de cada rede.'
+        },
+        {
+          icon: 'users',
+          title: 'Círculos de Oração',
+          desc: 'Grupos que continuam orando entre as campanhas, por congregação, para que o fôlego de janeiro não se apague em março.'
+        },
+        {
+          icon: 'flame',
+          title: 'Campanha de Janeiro',
+          desc: 'Doze dias de clamor (04 a 15/01) para abrir o ano, das 10h à meia-noite na Congregação 09, com culto local na terça e no domingo.'
+        },
+        {
+          icon: 'target',
+          title: 'Campanha de Agosto',
+          desc: 'Batalha Espiritual na Porta dos Cavalos, a partir de Efésios 6:10-18, fechando antes do Congresso de Mulheres (28/08).'
+        }
+      ],
+      phasesTitle: 'Estrutura do Ministério de Intercessão (proposta)',
+      phases: [
+        {
+          tab: 'Liderança',
+          period: 'Jan · Estruturação',
+          title: 'Quem lidera a oração da Área 71',
+          summary: 'A vaga de líder de intercessão entra no Mapa de Liderança (noite de 14/01) junto com as vagas de cada rede.',
+          bullets: [
+            'Líder de intercessão da Área, escolhido pelo pastor a partir do Mapa de Liderança.',
+            'Responsável por congregação para manter o círculo de oração local.',
+            'Pares de intercessores ligados a cada rede, para toda rede ter cobertura.',
+            'Decisão pendente: um líder único para a Área ou um por congregação com coordenador acima.'
+          ]
+        },
+        {
+          tab: 'Círculos',
+          period: 'Fev – Dez · Permanente',
+          title: 'Círculos de Oração entre as campanhas',
+          summary: 'O que acontece nos meses sem campanha. Formato a definir pelo pastor.',
+          bullets: [
+            'Um círculo de oração por congregação, com dia e horário fixos.',
+            'Pedidos acompanhados e testemunhos registrados mês a mês, ligados à Porta do mês.',
+            'Conexão com a Torre de Intercessão da Geração 60+ e com a equipe de Intercessão da Rede de Mulheres.',
+            'Pergunta aberta: o Círculo de Oração é uma rede de mulheres ou um modelo para toda a igreja?'
+          ]
+        },
+        {
+          tab: 'Campanha Jan',
+          period: '04 a 15/01 · 12 dias',
+          title: 'Campanha de Oração de Janeiro',
+          summary: 'Abertura espiritual do ano, todos os dias, das 10h à meia-noite (a princípio), na Congregação 09.',
+          bullets: [
+            'Terça e domingo: culto em cada congregação local; no restante do dia, uma só congregação (a 09).',
+            'Cada dia pode consagrar uma Porta ou um mês de 2027.',
+            'A Campanha segue em todos os dias, inclusive nas noites da Escola (07, 11, 14/01). Nas terças e domingos continua depois do culto local; no Fruto Fiel (09/01), depois dele.',
+            'Encerramento em 15/01, véspera da primeira noite sem Campanha.'
+          ]
+        },
+        {
+          tab: 'Campanha Ago + Vigília',
+          period: 'Ago · Data a definir',
+          title: 'Batalha Espiritual e Vigília Anual',
+          summary: 'A segunda grande campanha do ano e a Vigília exigida por área pela IEADAM.',
+          bullets: [
+            'Campanha de Batalha Espiritual em Agosto, baseada em Efésios 6:10-18, encerrando antes de 28/08.',
+            'Vigília da Área 71: janela sugerida em Maio (Porta da Fonte) ou Agosto (Porta dos Cavalos).',
+            'Líder de intercessão e círculos como equipe de apoio de cada culto de campanha.'
+          ]
+        }
+      ],
+      toggles: [
+        {
+          title: 'Decisões pendentes do pastor',
+          badge: 'Decisão',
+          content: `
+            <ul class="space-y-1.5 text-sm list-disc pl-5">
+              <li>Qual o objetivo de cada campanha: intercessão pela igreja, pela cidade ou pelo avivamento?</li>
+              <li>Quem conduz cada dia e em qual horário?</li>
+              <li>O que permanece depois da campanha: círculos fixos, pedidos acompanhados, testemunhos?</li>
+              <li>Líder de intercessão único para a Área ou um por congregação?</li>
+              <li>O Círculo de Oração é rede de mulheres ou modelo para toda a igreja?</li>
+            </ul>
+          `
+        },
+        {
+          title: 'Base Bíblica para o Ministério (referências a conferir no texto)',
+          badge: 'Escrituras',
+          content: `
+            <ul class="space-y-1.5 text-sm list-disc pl-5">
+              <li><strong>Atos 1:14:</strong> a igreja nasce em unanimidade de oração.</li>
+              <li><strong>Atos 2:42:</strong> a oração como marca da comunidade.</li>
+              <li><strong>Atos 12:5 e 12:</strong> a igreja ora por Pedro, e o grupo se reúne em uma casa (liga com a célula).</li>
+              <li><strong>Mateus 18:19-20:</strong> a oração em acordo.</li>
+              <li><strong>Neemias 1:</strong> Neemias ora antes de reconstruir (liga com as 12 Portas).</li>
+            </ul>
+          `
+        },
+        {
+          title: 'Conexão com as Redes',
+          badge: 'Integração',
+          content: `
+            <ul class="space-y-1.5 text-sm list-disc pl-5">
+              <li><strong>Geração 60+:</strong> a Torre de Intercessão já prevista no capítulo da rede passa a ser parte do ministério.</li>
+              <li><strong>Mulheres:</strong> a equipe de Intercessão da rede se liga ao líder de intercessão da Área.</li>
+              <li><strong>Demais redes:</strong> um par de intercessores por rede, indicado na noite de 14/01.</li>
+            </ul>
+          `
+        }
+      ],
+      checklist: [
+        'Incluir as vagas de líder de intercessão e de responsável por congregação no Mapa de Liderança (14/01)',
+        'Decidir se o líder de intercessão é único para a Área ou um por congregação',
+        'Definir o formato dos círculos de oração entre as campanhas',
+        'Montar a escala e o roteiro dos 12 dias da Campanha de Janeiro (04 a 15/01)',
+        'Definir a data da Campanha de Batalha Espiritual em Agosto (antes de 28/08)',
+        'Escolher a data da Vigília Anual da Área 71 (Maio ou Agosto)'
       ]
     }
   };
